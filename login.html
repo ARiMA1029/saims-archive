@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SAIMS - 認証</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-page">
+
+<div class="login-box">
+
+    <div class="login-government">
+        CABINET SECRETARIAT
+    </div>
+
+    <h1>SAIMS</h1>
+
+    <p class="login-system-name">
+        特別事象情報管理システム
+    </p>
+
+    <div class="login-notice">
+        本システムは内閣官房指定職員専用です。
+    </div>
+
+    <form id="loginForm">
+
+        <label>職員識別番号</label>
+
+        <input
+            type="text"
+            id="staffId"
+            autocomplete="off"
+        >
+
+        <label>認証符号</label>
+
+        <input
+            type="password"
+            id="password"
+        >
+
+        <button type="submit">
+            認証
+        </button>
+
+    </form>
+
+    <div id="loginError" class="login-error">
+    </div>
+
+    <div class="session-area">
+
+        <p>
+            RECOVERED SESSION DATA DETECTED
+        </p>
+
+        <button id="recoveredLogin">
+            復元済みセッションを使用
+        </button>
+
+    </div>
+
+    <div class="login-footer">
+        SAIMS AUTHENTICATION GATEWAY<br>
+        INTERNAL NETWORK ONLY
+    </div>
+
+</div>
+
+
+<script>
+
+const loginForm = document.getElementById("loginForm");
+const loginError = document.getElementById("loginError");
+
+loginForm.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    loginError.innerHTML =
+        "AUTHENTICATION FAILED<br>" +
+        "この端末からの認証要求は拒否されました。";
+
+});
+
+document.getElementById("recoveredLogin")
+.addEventListener("click", function() {
+
+    window.location.href = "system.html";
+
+});
+
+</script>
+
+</body>
+
+</html>
