@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>内部通達 - SAIMS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="saims-header">
+    <div>
+        <div class="system-name">
+            CABINET SECRETARIAT / INTERNAL NETWORK
+        </div>
+
+        <h1>SAIMS</h1>
+        <p>特別事象情報管理システム</p>
+    </div>
+
+    <div class="system-status">
+        <span>AUTHORIZED</span>
+        <span>CS-INTERNAL</span>
+    </div>
+</header>
+
+<div class="user-bar">
+    <span>利用者：████ ████</span>
+    <span>権限：LEVEL 3</span>
+    <span>SESSION：ACTIVE</span>
+</div>
+
+<main class="dashboard">
+
+    <p>
+        <a href="system.html">← システムホームへ戻る</a>
+    </p>
+
+    <section class="dashboard-title">
+        <h2>内部通達</h2>
+        <p>INTERNAL NOTICE DATABASE</p>
+    </section>
+
+    <div class="notice-warning">
+        <strong>取扱注意</strong>
+        <p>
+            本データベースには、特別事象調査室の内部運用に関する
+            非公開文書が収録されています。
+        </p>
+    </div>
+
+    <div class="document-count">
+        DISPLAYING 5 RECORDS
+    </div>
+
+    <section class="document-list">
+
+        <a href="#" class="document-row">
+
+            <div class="document-id">
+                通達26-041
+            </div>
+
+            <div class="document-date">
+                2026/08/11
+            </div>
+
+            <div class="document-title">
+                事案記録の取扱いについて
+            </div>
+
+            <div class="document-level">
+                LEVEL 2
+            </div>
+
+        </a>
+
+
+        <a href="#" class="document-row">
+
+            <div class="document-id">
+                通達26-038
+            </div>
+
+            <div class="document-date">
+                2026/07/29
+            </div>
+
+            <div class="document-title">
+                現地調査班の運用について
+            </div>
+
+            <div class="document-level">
+                LEVEL 3
+            </div>
+
+        </a>
+
+
+        <a href="#" class="document-row">
+
+            <div class="document-id">
+                通達26-031
+            </div>
+
+            <div class="document-date">
+                2026/07/02
+            </div>
+
+            <div class="document-title">
+                ██████████████に係る対応について
+            </div>
+
+            <div class="document-level">
+                LEVEL 3
+            </div>
+
+        </a>
+
+
+        <a href="#" class="document-row">
+
+            <div class="document-id">
+                通達26-019
+            </div>
+
+            <div class="document-date">
+                2026/05/14
+            </div>
+
+            <div class="document-title">
+                情報公開請求への対応について
+            </div>
+
+            <div class="document-level">
+                LEVEL 2
+            </div>
+
+        </a>
+
+
+        <div class="document-row classified"
+             onclick="showNoticeDenied()">
+
+            <div class="document-id">
+                ████████
+            </div>
+
+            <div class="document-date">
+                ████/██/██
+            </div>
+
+            <div class="document-title">
+                ████████████████████
+            </div>
+
+            <div class="document-level level4">
+                LEVEL 4
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<div id="noticeModal" class="modal-background">
+
+    <div class="modal-box">
+
+        <div class="modal-title">
+            SAIMS DOCUMENT CONTROL
+        </div>
+
+        <h2>ACCESS DENIED</h2>
+
+        <p>
+            指定された文書を閲覧する権限がありません。
+            <br><br>
+            REQUIRED CLEARANCE : LEVEL 4
+        </p>
+
+        <button onclick="closeNoticeModal()">
+            閉じる
+        </button>
+
+    </div>
+
+</div>
+
+
+<footer>
+    <p>Cabinet Secretariat Special Affairs Investigation Office</p>
+    <p>SAIMS Build 4.21.06 / Internal Notice Database</p>
+</footer>
+
+
+<script>
+
+function showNoticeDenied() {
+    document.getElementById("noticeModal").style.display = "flex";
+}
+
+function closeNoticeModal() {
+    document.getElementById("noticeModal").style.display = "none";
+}
+
+</script>
+
+</body>
+</html>
