@@ -9,67 +9,240 @@
 
 <body>
 
-<header>
-    <div class="system-name">
-        CABINET SECRETARIAT / INTERNAL NETWORK
+<header class="saims-header">
+    <div>
+        <div class="system-name">
+            CABINET SECRETARIAT / INTERNAL NETWORK
+        </div>
+
+        <h1>SAIMS</h1>
+        <p>特別事象情報管理システム</p>
     </div>
 
-    <h1>特別事象情報管理システム</h1>
-    <p>Special Affairs Information Management System</p>
+    <div class="system-status">
+        <span>AUTHORIZED</span>
+        <span>CS-INTERNAL</span>
+    </div>
 </header>
 
-<main>
+<div class="user-bar">
+    <span>利用者：████ ████</span>
+    <span>職員識別番号：SAI-██████</span>
+    <span>権限：LEVEL 3</span>
+    <span>SESSION：ACTIVE</span>
+</div>
 
-    <section class="status">
-        <h2>SAIMS</h2>
+<main class="dashboard">
 
-        <p>システム状態：<strong>ONLINE</strong></p>
-        <p>接続先：CS-INTERNAL / NODE-04</p>
-        <p>最終同期：2026/08/██ 02:14:37</p>
+    <section class="dashboard-title">
+        <h2>システムホーム</h2>
+        <p>System Dashboard</p>
     </section>
 
-    <section class="warning">
-        <h2>【取扱注意】</h2>
+    <section class="notice-panel">
+        <div class="panel-header">
+            重要通知
+        </div>
 
-        <p>
-            本システムは、内閣官房特別事象調査室の指定職員を対象とした
-            内部情報管理システムです。
-        </p>
+        <div class="notice-item">
+            <span class="notice-date">2026/08/██</span>
+            未確認事案が3件登録されています。
+        </div>
 
-        <p>
-            権限を有しない者によるアクセス、記録の複製、
-            外部への提供その他の行為を禁止します。
-        </p>
+        <div class="notice-item">
+            <span class="notice-date">2026/08/██</span>
+            観測継続事案17件について定期報告が未提出です。
+        </div>
+
+        <div class="notice-item">
+            <span class="notice-date">2026/08/██</span>
+            █████支局との通信障害が継続しています。
+        </div>
     </section>
 
-    <section class="menu">
+    <section class="dashboard-section">
 
-        <h2>内部データベース</h2>
+        <h3>事案管理</h3>
 
-        <a class="menu-button" href="cases.html">
-            事案記録
-        </a>
+        <div class="dashboard-grid">
 
-        <a class="menu-button locked" href="#">
-            組織内部資料
-        </a>
+            <a href="cases.html" class="dashboard-card">
+                <strong>事案記録検索</strong>
+                <span>INCIDENT DATABASE</span>
+                <p>登録済み特別事象の検索・閲覧</p>
+            </a>
 
-        <a class="menu-button locked" href="#">
-            通達・報告
-        </a>
+            <button class="dashboard-card disabled-card"
+                    onclick="showAccessDenied('WRITE')">
+                <strong>新規事案登録</strong>
+                <span>NEW INCIDENT</span>
+                <p>新規特別事象の登録</p>
+            </button>
 
-        <a class="menu-button locked" href="#">
-            █████████
-        </a>
+            <button class="dashboard-card disabled-card"
+                    onclick="showAccessDenied('LEVEL4')">
+                <strong>統合監視画面</strong>
+                <span>MONITORING</span>
+                <p>現在観測中の事案を表示</p>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <section class="dashboard-section">
+
+        <h3>内部資料</h3>
+
+        <div class="dashboard-grid">
+
+            <button class="dashboard-card"
+                    onclick="showUnavailable()">
+                <strong>調査資料</strong>
+                <span>INVESTIGATION FILES</span>
+                <p>現地調査及び分析資料</p>
+            </button>
+
+            <button class="dashboard-card"
+                    onclick="showUnavailable()">
+                <strong>内部通達</strong>
+                <span>INTERNAL NOTICE</span>
+                <p>室内通達・運用通知</p>
+            </button>
+
+            <button class="dashboard-card disabled-card"
+                    onclick="showAccessDenied('LEVEL4')">
+                <strong>組織情報</strong>
+                <span>ORGANIZATION</span>
+                <p>組織構成及び職員情報</p>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <section class="dashboard-section">
+
+        <h3>システム</h3>
+
+        <div class="dashboard-grid">
+
+            <button class="dashboard-card disabled-card"
+                    onclick="showAccessDenied('LEVEL4')">
+                <strong>職員情報</strong>
+                <span>PERSONNEL</span>
+                <p>登録職員データベース</p>
+            </button>
+
+            <button class="dashboard-card"
+                    onclick="showUnavailable()">
+                <strong>操作履歴</strong>
+                <span>ACCESS LOG</span>
+                <p>SAIMS操作記録</p>
+            </button>
+
+            <a href="login.html" class="dashboard-card logout-card">
+                <strong>ログアウト</strong>
+                <span>LOGOUT</span>
+                <p>現在のセッションを終了</p>
+            </a>
+
+        </div>
 
     </section>
 
 </main>
 
+
+<div id="accessModal" class="modal-background">
+
+    <div class="modal-box">
+
+        <div class="modal-title">
+            SAIMS SECURITY
+        </div>
+
+        <h2 id="modalHeading">
+            ACCESS DENIED
+        </h2>
+
+        <p id="modalMessage"></p>
+
+        <button onclick="closeModal()">
+            閉じる
+        </button>
+
+    </div>
+
+</div>
+
+
 <footer>
-    <p>Cabinet Secretariat Special Affairs Investigation Office</p>
-    <p>SAIMS Build 4.21.06</p>
+    <p>
+        Cabinet Secretariat Special Affairs Investigation Office
+    </p>
+
+    <p>
+        SAIMS Build 4.21.06 / Secure Session
+    </p>
 </footer>
+
+
+<script>
+
+function showAccessDenied(type) {
+
+    const modal = document.getElementById("accessModal");
+    const message = document.getElementById("modalMessage");
+
+    if (type === "WRITE") {
+
+        message.innerHTML =
+            "現在のセッションには書込権限がありません。<br><br>" +
+            "REQUIRED PERMISSION : WRITE ACCESS";
+
+    }
+
+    if (type === "LEVEL4") {
+
+        message.innerHTML =
+            "指定された情報を閲覧する権限がありません。<br><br>" +
+            "REQUIRED CLEARANCE : LEVEL 4";
+
+    }
+
+    modal.style.display = "flex";
+
+}
+
+function showUnavailable() {
+
+    const modal = document.getElementById("accessModal");
+    const heading = document.getElementById("modalHeading");
+    const message = document.getElementById("modalMessage");
+
+    heading.innerText = "DATA UNAVAILABLE";
+
+    message.innerHTML =
+        "指定されたデータの一部が復元されていません。<br><br>" +
+        "ARCHIVE STATUS : INCOMPLETE";
+
+    modal.style.display = "flex";
+
+}
+
+function closeModal() {
+
+    document.getElementById("accessModal").style.display = "none";
+
+    document.getElementById("modalHeading").innerText =
+        "ACCESS DENIED";
+
+}
+
+</script>
 
 </body>
 
