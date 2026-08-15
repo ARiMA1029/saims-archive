@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>統合監視 - SAIMS</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="saims-header">
+
+    <div>
+        <div class="system-name">
+            CABINET SECRETARIAT / INTERNAL NETWORK
+        </div>
+
+        <h1>SAIMS</h1>
+        <p>特別事象情報管理システム</p>
+    </div>
+
+    <div class="system-status">
+        <span>● MONITORING ACTIVE</span>
+        <span>CS-INTERNAL</span>
+    </div>
+
+</header>
+
+
+<div class="user-bar">
+
+    <span>利用者：████ ████</span>
+    <span>権限：LEVEL 3</span>
+    <span>監視系統：NATIONAL</span>
+    <span>SESSION：ACTIVE</span>
+
+</div>
+
+
+<main class="dashboard monitoring-dashboard">
+
+    <p>
+        <a href="system.html">
+            ← システムホームへ戻る
+        </a>
+    </p>
+
+
+    <section class="dashboard-title">
+
+        <h2>統合監視</h2>
+
+        <p>
+            NATIONAL SPECIAL AFFAIRS MONITORING
+        </p>
+
+    </section>
+
+
+    <!-- 上部ステータス -->
+
+    <section class="monitor-stats">
+
+        <div class="monitor-stat">
+
+            <span class="monitor-value">
+                07
+            </span>
+
+            <span class="monitor-label">
+                ACTIVE SIGNALS
+            </span>
+
+        </div>
+
+
+        <div class="monitor-stat">
+
+            <span class="monitor-value">
+                17
+            </span>
+
+            <span class="monitor-label">
+                UNDER OBSERVATION
+            </span>
+
+        </div>
+
+
+        <div class="monitor-stat warning-stat">
+
+            <span class="monitor-value">
+                02
+            </span>
+
+            <span class="monitor-label">
+                CRITICAL
+            </span>
+
+        </div>
+
+
+        <div class="monitor-stat">
+
+            <span class="monitor-value">
+                146
+            </span>
+
+            <span class="monitor-label">
+                SENSORS ONLINE
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- システム状態 -->
+
+    <section class="monitor-system-bar">
+
+        <span>
+            ● SENSOR NETWORK
+            <strong>ONLINE</strong>
+        </span>
+
+        <span>
+            ● INCIDENT DATABASE
+            <strong>ONLINE</strong>
+        </span>
+
+        <span>
+            ● REGIONAL NODES
+            <strong>12 / 13</strong>
+        </span>
+
+        <span>
+            LAST SYNC :
+            <strong id="monitorClock">--:--:--</strong>
+        </span>
+
+    </section>
+
+
+    <div class="monitor-columns">
+
+
+        <!-- 地域 -->
+
+        <section class="region-monitor">
+
+            <div class="monitor-heading">
+
+                <span>
+                    REGIONAL STATUS
+                </span>
+
+                <span>
+                    JAPAN / ALL SECTORS
+                </span>
+
+            </div>
+
+
+            <div class="region-row">
+
+                <span>北海道</span>
+
+                <span class="region-code">
+                    JP-01
+                </span>
+
+                <span class="status-normal">
+                    ● NORMAL
+                </span>
+
+                <span>0</span>
+
+            </div>
+
+
+            <div class="region-row">
+
+                <span>東北</span>
+
+                <span class="region-code">
+                    JP-02
+                </span>
+
+                <span class="status-observe">
+                    ● OBSERVING
+                </span>
+
+                <span>2</span>
+
+            </div>
+
+
+            <div class="region-row">
+
+                <span>関東</span>
+
+                <span class="region-code">
+                    JP-03
+                </span>
+
+                <span class="status-active">
+                    ● ACTIVE
+                </span>
+
+                <span>3</span>
+
+            </div>
+
+
+            <div class="region-row">
+
+                <span>中部</span>
+
+                <span class="region-code">
+                    JP-04
+                </span>
+
+                <span class="status-normal">
+                    ● NORMAL
+                </span>
+
+                <span>0</span>
+
+            </div>
+
+
+            <div class="region-row">
+
+                <span>近畿</span>
+
+                <span class="region-code">
+                    JP-05
+                </span>
+
+                <span class="status-active">
+                    ● ACTIVE
+                </span>
+
+                <span>1</span>
+
+            </div>
+
+
+            <div class="region-row">
+
+                <span>中国</span>
+
+                <span class="region-code">
+                    JP-06
+                </span>
+
+                <span class="status-observe">
+                    ● OBSERVING
+                </span>
+
+                <span>1</span>
+
+            </div>
+
+
+            <div class="region-row">
+
+                <span>四国</span>
+
+                <span class="region-code">
+                    JP-07
+                </span>
+
+                <span class="status-normal">
+                    ● NORMAL
+                </span>
+
+                <span>0</span>
+
+            </div>
+
+
+            <div class="region-row">
+
+                <span>九州・沖縄</span>
+
+                <span class="region-code">
+                    JP-08
+                </span>
+
+                <span class="status-restricted">
+                    ● RESTRICTED
+                </span>
+
+                <span>██</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- LIVE FEED -->
+
+        <section class="live-feed">
+
+            <div class="monitor-heading">
+
+                <span>
+                    LIVE FEED
+                </span>
+
+                <span class="live-indicator">
+                    ● LIVE
+                </span>
+
+            </div>
+
+
+            <div id="feedContainer">
+
+                <div class="feed-row">
+
+                    <span>23:51:04</span>
+
+                    <span>
+                        SA-██-2026-███
+                    </span>
+
+                    <span class="feed-alert">
+                        SIGNAL DETECTED
+                    </span>
+
+                </div>
+
+
+                <div class="feed-row">
+
+                    <span>23:48:21</span>
+
+                    <span>
+                        SA-14-2026-017
+                    </span>
+
+                    <span>
+                        STATUS UPDATED
+                    </span>
+
+                </div>
+
+
+                <div class="feed-row">
+
+                    <span>23:42:09</span>
+
+                    <span>
+                        █████████████
+                    </span>
+
+                    <span class="feed-restricted">
+                        LEVEL 4
+                    </span>
+
+                </div>
+
+
+                <div class="feed-row">
+
+                    <span>23:37:52</span>
+
+                    <span>
+                        SENSOR JP03-041
+                    </span>
+
+                    <span>
+                        RESPONSE NORMAL
+                    </span>
+
+                </div>
+
+
+                <div class="feed-row">
+
+                    <span>23:29:16</span>
+
+                    <span>
+                        SA-██-2026-███
+                    </span>
+
+                    <span>
+                        OBSERVATION CONTINUED
+                    </span>
+
+                </div>
+
+
+                <div class="feed-row">
+
+                    <span>23:21:03</span>
+
+                    <span>
+                        NODE JP08
+                    </span>
+
+                    <span class="feed-alert">
+                        CONNECTION LOST
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- 下部 -->
+
+    <section class="monitor-message">
+
+        <span>
+            SYSTEM MESSAGE
+        </span>
+
+        <p>
+            全国監視網は稼働中です。
+            一部地域ノードとの通信に異常が発生しています。
+        </p>
+
+        <p class="monitor-message-code">
+            EVENT : NODE-JP08 / STATUS : UNRESOLVED
+        </p>
+
+    </section>
+
+
+</main>
+
+
+<footer>
+
+    <p>
+        Cabinet Secretariat Special Affairs Investigation Office
+    </p>
+
+    <p>
+        SAIMS / National Monitoring Network
+    </p>
+
+</footer>
+
+
+<script>
+
+function updateMonitorClock() {
+
+    const now = new Date();
+
+    const time =
+        String(now.getHours()).padStart(2, "0")
+        + ":" +
+        String(now.getMinutes()).padStart(2, "0")
+        + ":" +
+        String(now.getSeconds()).padStart(2, "0");
+
+    document.getElementById("monitorClock").innerText =
+        time;
+
+}
+
+updateMonitorClock();
+
+setInterval(updateMonitorClock, 1000);
+
+</script>
+
+
+</body>
+</html>
