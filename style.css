@@ -1007,3 +1007,838 @@ footer {
     }
 
 }
+/* =========================
+   セッション復元演出
+   ========================= */
+
+.restore-screen {
+    display: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #080a0a;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+.restore-terminal {
+    width: 90%;
+    max-width: 650px;
+
+    padding: 40px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #313737;
+
+    background-color: #0b0e0e;
+
+    font-family: "Courier New", monospace;
+}
+
+.restore-header {
+    color: #aeb6b6;
+
+    font-size: 14px;
+    letter-spacing: 3px;
+
+    padding-bottom: 15px;
+    border-bottom: 1px solid #303535;
+}
+
+.restore-session {
+    margin-top: 15px;
+
+    color: #5d6868;
+
+    font-size: 10px;
+}
+
+.restore-text {
+    min-height: 170px;
+
+    margin-top: 35px;
+
+    color: #747f7f;
+
+    font-size: 13px;
+    line-height: 2;
+}
+
+.restore-ok {
+    color: #71947b;
+}
+
+.restore-final {
+    color: #bcc4c4;
+
+    animation: terminalBlink 1s infinite;
+}
+
+@keyframes terminalBlink {
+
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+/* ==========================================
+   SAIMS FUTURE DARK UI
+   ========================================== */
+
+body:not(.archive-page):not(.login-page) {
+    background:
+        radial-gradient(circle at top right, rgba(35, 110, 160, 0.12), transparent 35%),
+        radial-gradient(circle at bottom left, rgba(0, 180, 170, 0.08), transparent 30%),
+        #05080d;
+
+    color: #d9e5ee;
+}
+
+
+/* -------------------------
+   ヘッダー
+   ------------------------- */
+
+.saims-header {
+    background:
+        linear-gradient(90deg, rgba(7, 15, 24, 0.98), rgba(10, 24, 38, 0.98));
+
+    border-bottom: 1px solid #1f4a63;
+    box-shadow: 0 0 30px rgba(37, 157, 211, 0.08);
+
+    padding-top: 28px;
+    padding-bottom: 28px;
+}
+
+.saims-header h1 {
+    color: #eef8ff;
+
+    font-family: "Courier New", monospace;
+
+    font-size: 42px;
+    letter-spacing: 8px;
+
+    text-shadow:
+        0 0 10px rgba(76, 201, 240, 0.35);
+
+    margin-top: 8px;
+}
+
+.saims-header p {
+    color: #708999;
+    letter-spacing: 2px;
+}
+
+.system-name {
+    color: #4f7185;
+}
+
+.system-status span:first-child {
+    color: #5ee6a8;
+
+    text-shadow:
+        0 0 10px rgba(94, 230, 168, 0.45);
+}
+
+.system-status span:last-child {
+    color: #5c7b8f;
+}
+
+
+/* -------------------------
+   ユーザーバー
+   ------------------------- */
+
+.user-bar {
+    background: rgba(7, 14, 22, 0.96);
+
+    border-bottom: 1px solid #142b3a;
+
+    color: #637d8e;
+
+    padding-top: 11px;
+    padding-bottom: 11px;
+}
+
+
+/* -------------------------
+   ナビゲーション
+   ------------------------- */
+
+.saims-nav {
+    background: rgba(8, 16, 25, 0.98);
+    border-bottom: 1px solid #163448;
+
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.saims-nav a,
+.saims-nav button {
+    color: #7894a6;
+
+    border-right: 1px solid #122b3a;
+
+    transition: 0.18s;
+}
+
+.saims-nav a:hover,
+.saims-nav button:hover {
+    background: #0d1d2a;
+
+    color: #79ddff;
+
+    box-shadow:
+        inset 0 -2px 0 #4cc9f0;
+}
+
+.saims-nav .nav-active {
+    background: #0c1a26;
+
+    border-top: 2px solid #4cc9f0;
+
+    color: #b9efff;
+
+    box-shadow:
+        0 0 15px rgba(76, 201, 240, 0.1);
+}
+
+.nav-clock {
+    color: #476273;
+}
+
+#systemClock {
+    color: #77cde9;
+}
+
+
+/* -------------------------
+   メイン
+   ------------------------- */
+
+main,
+.dashboard {
+    background: rgba(7, 13, 20, 0.88);
+
+    border: 1px solid #132b3b;
+
+    box-shadow:
+        0 0 45px rgba(0, 0, 0, 0.35);
+
+    backdrop-filter: blur(8px);
+}
+
+.dashboard-title {
+    border-bottom: 1px solid #173447;
+}
+
+.dashboard-title h2 {
+    color: #e7f6ff;
+
+    font-weight: 500;
+
+    letter-spacing: 2px;
+}
+
+.dashboard-title p {
+    color: #486a7d;
+
+    letter-spacing: 3px;
+}
+
+
+/* -------------------------
+   重要通知
+   ------------------------- */
+
+.notice-panel {
+    background: #08121b;
+
+    border: 1px solid #17384b;
+
+    box-shadow:
+        0 0 20px rgba(28, 96, 132, 0.08);
+}
+
+.panel-header {
+    background:
+        linear-gradient(90deg, #0e2534, #0b1d29);
+
+    color: #8edfff;
+
+    border-bottom: 1px solid #1d455c;
+
+    letter-spacing: 2px;
+}
+
+.notice-item {
+    border-bottom: 1px solid #102838;
+
+    color: #9fb0bb;
+
+    transition: 0.15s;
+}
+
+.notice-item:hover {
+    background: rgba(31, 101, 135, 0.08);
+}
+
+.notice-date {
+    color: #4c7388;
+}
+
+
+/* -------------------------
+   セクション見出し
+   ------------------------- */
+
+.dashboard-section h3 {
+    color: #87dfff;
+
+    border-bottom: 1px solid #1b4962;
+
+    font-weight: 500;
+
+    letter-spacing: 2px;
+}
+
+
+/* -------------------------
+   ダッシュボードカード
+   ------------------------- */
+
+.dashboard-card {
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(10, 22, 33, 0.96),
+            rgba(7, 16, 25, 0.96)
+        );
+
+    border: 1px solid #17384c;
+    border-left: 2px solid #3f9ec5;
+
+    color: #d4e4ee;
+
+    transition:
+        transform 0.18s ease,
+        border-color 0.18s ease,
+        box-shadow 0.18s ease,
+        background 0.18s ease;
+}
+
+.dashboard-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(76, 201, 240, 0.8),
+            transparent
+        );
+
+    opacity: 0;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #2e7fa3;
+    border-left-color: #65ddff;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(12, 30, 44, 0.98),
+            rgba(7, 18, 28, 0.98)
+        );
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.35),
+        0 0 20px rgba(76, 201, 240, 0.08);
+}
+
+.dashboard-card:hover::before {
+    opacity: 1;
+}
+
+.dashboard-card strong {
+    color: #dcf4ff;
+
+    font-size: 16px;
+
+    letter-spacing: 1px;
+}
+
+.dashboard-card span {
+    color: #47758c;
+
+    letter-spacing: 1px;
+}
+
+.dashboard-card p {
+    color: #708795;
+}
+
+.disabled-card {
+    border-left-color: #55616a;
+}
+
+.disabled-card:hover {
+    border-left-color: #83929d;
+}
+
+.logout-card {
+    border-left-color: #ab4a53;
+}
+
+.logout-card:hover {
+    border-color: #733840;
+    border-left-color: #ff6571;
+}
+
+
+/* -------------------------
+   モーダル
+   ------------------------- */
+
+.modal-background {
+    background: rgba(0, 4, 8, 0.82);
+
+    backdrop-filter: blur(5px);
+}
+
+.modal-box {
+    background: #08121b;
+
+    border: 1px solid #29485b;
+    border-top: 3px solid #ff5964;
+
+    color: #aebbc4;
+
+    box-shadow:
+        0 0 40px rgba(0, 0, 0, 0.65),
+        0 0 25px rgba(255, 89, 100, 0.06);
+}
+
+.modal-title {
+    color: #536f7f;
+}
+
+.modal-box h2 {
+    color: #ff6d78;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 0 10px rgba(255, 89, 100, 0.2);
+}
+
+.modal-box button {
+    background: #102b3d;
+
+    border: 1px solid #23526c;
+
+    color: #aee8ff;
+}
+
+.modal-box button:hover {
+    background: #153b52;
+}
+
+
+/* -------------------------
+   事案検索
+   ------------------------- */
+
+.search-panel {
+    background: #08131d;
+
+    border: 1px solid #19394c;
+}
+
+.search-panel label {
+    color: #6f91a4;
+}
+
+.search-field input,
+.filter-grid select {
+    background: #050b10;
+
+    color: #c8dbe5;
+
+    border: 1px solid #214458;
+
+    outline: none;
+}
+
+.search-field input:focus,
+.filter-grid select:focus {
+    border-color: #4cc9f0;
+
+    box-shadow:
+        0 0 0 2px rgba(76, 201, 240, 0.08);
+}
+
+.result-bar {
+    color: #668698;
+
+    border-bottom: 1px solid #25526b;
+}
+
+
+/* -------------------------
+   事案カード
+   ------------------------- */
+
+.case-record {
+    background: #09141e;
+
+    border: 1px solid #163649;
+    border-left: 2px solid #349bc3;
+
+    color: #d4e3ec;
+
+    transition: 0.18s;
+}
+
+.case-record:hover {
+    background: #0c1c29;
+
+    border-color: #286783;
+
+    border-left-color: #64d8ff;
+
+    transform: translateX(3px);
+
+    box-shadow:
+        0 0 18px rgba(76, 201, 240, 0.06);
+}
+
+.case-number {
+    color: #70dcff;
+}
+
+.case-title {
+    color: #dceaf2;
+}
+
+.case-info {
+    color: #617b8b;
+}
+
+.restricted-record {
+    opacity: 0.58;
+
+    border-left-color: #626c73;
+}
+
+
+/* -------------------------
+   内部通達
+   ------------------------- */
+
+.notice-warning {
+    background: #15130b;
+
+    border-left: 2px solid #9c8032;
+
+    color: #a99c73;
+}
+
+.document-list {
+    border-color: #173548;
+}
+
+.document-row {
+    background: #08121b;
+
+    border-bottom: 1px solid #102d3d;
+
+    color: #c0d0da;
+}
+
+.document-row:hover {
+    background: #0b1c28;
+
+    color: #e3f5ff;
+}
+
+.document-date {
+    color: #557284;
+}
+
+.document-level {
+    border-color: #315568;
+
+    color: #7295a8;
+}
+
+.level4 {
+    color: #e6616a;
+
+    border-color: #7d343a;
+}
+
+
+/* -------------------------
+   フッター
+   ------------------------- */
+
+footer {
+    color: #324b5a;
+
+    background: transparent;
+
+    letter-spacing: 1px;
+}
+
+
+/* -------------------------
+   リンク
+   ------------------------- */
+
+main a {
+    color: #65d8ff;
+}
+
+main a:hover {
+    color: #a9edff;
+}
+
+
+/* -------------------------
+   微妙な背景グリッド
+   ------------------------- */
+
+body:not(.archive-page):not(.login-page)::before {
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(
+            rgba(80, 150, 185, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(80, 150, 185, 0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 40px 40px;
+
+    z-index: -1;
+}
+
+
+/* -------------------------
+   スクロールバー
+   ------------------------- */
+
+body:not(.archive-page):not(.login-page)::-webkit-scrollbar {
+    width: 10px;
+}
+
+body:not(.archive-page):not(.login-page)::-webkit-scrollbar-track {
+    background: #05080d;
+}
+
+body:not(.archive-page):not(.login-page)::-webkit-scrollbar-thumb {
+    background: #173448;
+
+    border: 2px solid #05080d;
+}
+
+body:not(.archive-page):not(.login-page)::-webkit-scrollbar-thumb:hover {
+    background: #235671;
+}
+/* =========================
+   調査資料
+   ========================= */
+
+.file-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.file-summary > div {
+    padding: 18px;
+    border: 1px solid #17384c;
+    background: #09141e;
+}
+
+.file-summary-number {
+    display: block;
+    font-family: monospace;
+    font-size: 25px;
+    color: #72dfff;
+}
+
+.file-summary-label {
+    display: block;
+    margin-top: 5px;
+    font-family: monospace;
+    font-size: 9px;
+    color: #567386;
+}
+
+.file-toolbar {
+    display: grid;
+    grid-template-columns: 1fr 180px;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.file-toolbar input,
+.file-toolbar select {
+    padding: 11px;
+    box-sizing: border-box;
+    background: #071018;
+    color: #bdd2df;
+    border: 1px solid #1d4359;
+}
+
+.file-result {
+    margin-top: 25px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #24506a;
+    font-family: monospace;
+    font-size: 10px;
+    color: #5d7b8e;
+}
+
+.investigation-file {
+    display: grid;
+    grid-template-columns: 60px 1fr 110px 110px;
+    align-items: center;
+
+    min-height: 70px;
+    padding: 10px 15px;
+
+    border-bottom: 1px solid #153447;
+    background: #08131c;
+
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+.investigation-file:hover {
+    background: #0c1e2b;
+    transform: translateX(3px);
+}
+
+.file-icon {
+    font-family: monospace;
+    color: #5cbddd;
+}
+
+.file-main strong {
+    display: block;
+    font-family: monospace;
+    color: #cdefff;
+}
+
+.file-main span {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #7f96a5;
+}
+
+.file-type {
+    font-family: monospace;
+    font-size: 10px;
+    color: #58788b;
+}
+
+.file-status {
+    font-family: monospace;
+    font-size: 9px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid;
+}
+
+.file-status.recovered {
+    color: #65d99d;
+    border-color: #315e48;
+}
+
+.file-status.damaged {
+    color: #e7a457;
+    border-color: #76562f;
+}
+
+.file-status.restricted {
+    color: #ff6973;
+    border-color: #783940;
+}
+
+.damaged-file {
+    opacity: 0.75;
+}
+
+.restricted-file {
+    opacity: 0.55;
+}
+
+@media (max-width: 750px) {
+
+    .file-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .file-toolbar {
+        grid-template-columns: 1fr;
+    }
+
+    .investigation-file {
+        grid-template-columns: 45px 1fr;
+        gap: 8px;
+    }
+
+    .file-type,
+    .file-status {
+        grid-column: 2;
+        width: max-content;
+    }
+
+}

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>調査資料 - SAIMS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="saims-header">
+
+    <div>
+        <div class="system-name">
+            CABINET SECRETARIAT / INTERNAL NETWORK
+        </div>
+
+        <h1>SAIMS</h1>
+        <p>特別事象情報管理システム</p>
+    </div>
+
+    <div class="system-status">
+        <span>AUTHORIZED</span>
+        <span>CS-INTERNAL</span>
+    </div>
+
+</header>
+
+<div class="user-bar">
+    <span>利用者：████ ████</span>
+    <span>職員識別番号：SAI-██████</span>
+    <span>権限：LEVEL 3</span>
+    <span>SESSION：ACTIVE</span>
+</div>
+
+<main class="dashboard">
+
+    <p>
+        <a href="system.html">← システムホームへ戻る</a>
+    </p>
+
+    <section class="dashboard-title">
+        <h2>調査資料</h2>
+        <p>INVESTIGATION FILES</p>
+    </section>
+
+
+    <section class="file-summary">
+
+        <div>
+            <span class="file-summary-number">28</span>
+            <span class="file-summary-label">RECOVERED</span>
+        </div>
+
+        <div>
+            <span class="file-summary-number">6</span>
+            <span class="file-summary-label">DAMAGED</span>
+        </div>
+
+        <div>
+            <span class="file-summary-number">11</span>
+            <span class="file-summary-label">RESTRICTED</span>
+        </div>
+
+    </section>
+
+
+    <section class="file-toolbar">
+
+        <input
+            type="text"
+            id="fileSearch"
+            placeholder="ファイル番号・資料名を検索"
+        >
+
+        <select id="fileType">
+
+            <option value="">
+                すべての形式
+            </option>
+
+            <option value="IMAGE">
+                IMAGE
+            </option>
+
+            <option value="AUDIO">
+                AUDIO
+            </option>
+
+            <option value="DOCUMENT">
+                DOCUMENT
+            </option>
+
+            <option value="DATA">
+                DATA
+            </option>
+
+        </select>
+
+    </section>
+
+
+    <div class="file-result">
+        DISPLAYING
+        <span id="fileCount">0</span>
+        OBJECTS
+    </div>
+
+
+    <section class="investigation-files">
+
+
+        <div class="investigation-file"
+             data-type="IMAGE"
+             onclick="showFileUnavailable()">
+
+            <div class="file-icon">
+                IMG
+            </div>
+
+            <div class="file-main">
+
+                <strong>
+                    FILE-017-A
+                </strong>
+
+                <span>
+                    現地記録画像_01
+                </span>
+
+            </div>
+
+            <div class="file-type">
+                IMAGE
+            </div>
+
+            <div class="file-status recovered">
+                RECOVERED
+            </div>
+
+        </div>
+
+
+        <div class="investigation-file"
+             data-type="AUDIO"
+             onclick="showFileUnavailable()">
+
+            <div class="file-icon">
+                AUD
+            </div>
+
+            <div class="file-main">
+
+                <strong>
+                    FILE-017-B
+                </strong>
+
+                <span>
+                    現地音声記録_03
+                </span>
+
+            </div>
+
+            <div class="file-type">
+                AUDIO
+            </div>
+
+            <div class="file-status recovered">
+                RECOVERED
+            </div>
+
+        </div>
+
+
+        <div class="investigation-file"
+             data-type="DOCUMENT"
+             onclick="showFileUnavailable()">
+
+            <div class="file-icon">
+                DOC
+            </div>
+
+            <div class="file-main">
+
+                <strong>
+                    FILE-017-C
+                </strong>
+
+                <span>
+                    初動対応記録
+                </span>
+
+            </div>
+
+            <div class="file-type">
+                DOCUMENT
+            </div>
+
+            <div class="file-status recovered">
+                RECOVERED
+            </div>
+
+        </div>
+
+
+        <div class="investigation-file damaged-file"
+             data-type="DATA"
+             onclick="showDamagedFile()">
+
+            <div class="file-icon">
+                DAT
+            </div>
+
+            <div class="file-main">
+
+                <strong>
+                    FILE-017-D
+                </strong>
+
+                <span>
+                    ████████████
+                </span>
+
+            </div>
+
+            <div class="file-type">
+                DATA
+            </div>
+
+            <div class="file-status damaged">
+                DAMAGED
+            </div>
+
+        </div>
+
+
+        <div class="investigation-file restricted-file"
+             data-type="DOCUMENT"
+             onclick="showRestrictedFile()">
+
+            <div class="file-icon">
+                RES
+            </div>
+
+            <div class="file-main">
+
+                <strong>
+                    FILE-████-██
+                </strong>
+
+                <span>
+                    █████████████████
+                </span>
+
+            </div>
+
+            <div class="file-type">
+                DOCUMENT
+            </div>
+
+            <div class="file-status restricted">
+                LEVEL 4
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<div id="fileModal" class="modal-background">
+
+    <div class="modal-box">
+
+        <div class="modal-title">
+            SAIMS FILE CONTROL
+        </div>
+
+        <h2 id="fileModalTitle">
+            DATA UNAVAILABLE
+        </h2>
+
+        <p id="fileModalText"></p>
+
+        <button onclick="closeFileModal()">
+            閉じる
+        </button>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    <p>
+        Cabinet Secretariat Special Affairs Investigation Office
+    </p>
+
+    <p>
+        SAIMS Build 4.21.06 / Investigation File Repository
+    </p>
+
+</footer>
+
+
+<script>
+
+const fileSearch =
+    document.getElementById("fileSearch");
+
+const fileType =
+    document.getElementById("fileType");
+
+const files =
+    document.querySelectorAll(".investigation-file");
+
+const fileCount =
+    document.getElementById("fileCount");
+
+
+function filterFiles() {
+
+    const search =
+        fileSearch.value.toLowerCase();
+
+    let count = 0;
+
+    files.forEach(function(file) {
+
+        const text =
+            file.innerText.toLowerCase();
+
+        const type =
+            file.dataset.type;
+
+        const searchMatch =
+            text.includes(search);
+
+        const typeMatch =
+            fileType.value === "" ||
+            fileType.value === type;
+
+
+        if (searchMatch && typeMatch) {
+
+            file.style.display = "grid";
+            count++;
+
+        }
+
+        else {
+
+            file.style.display = "none";
+
+        }
+
+    });
+
+    fileCount.innerText = count;
+
+}
+
+
+fileSearch.addEventListener(
+    "input",
+    filterFiles
+);
+
+fileType.addEventListener(
+    "change",
+    filterFiles
+);
+
+filterFiles();
+
+
+function showFileUnavailable() {
+
+    document.getElementById("fileModalTitle").innerText =
+        "OBJECT NOT RESTORED";
+
+    document.getElementById("fileModalText").innerHTML =
+        "ファイル本体はアーカイブ内に存在しますが、" +
+        "現在のミラーでは内容を復元できません。<br><br>" +
+        "OBJECT STATUS : PARTIAL";
+
+    document.getElementById("fileModal").style.display =
+        "flex";
+
+}
+
+
+function showDamagedFile() {
+
+    document.getElementById("fileModalTitle").innerText =
+        "OBJECT DAMAGED";
+
+    document.getElementById("fileModalText").innerHTML =
+        "ファイル構造に重大な破損が検出されました。<br><br>" +
+        "RECOVERY STATUS : FAILED";
+
+    document.getElementById("fileModal").style.display =
+        "flex";
+
+}
+
+
+function showRestrictedFile() {
+
+    document.getElementById("fileModalTitle").innerText =
+        "ACCESS DENIED";
+
+    document.getElementById("fileModalText").innerHTML =
+        "現在のセッションではこの資料を閲覧できません。<br><br>" +
+        "REQUIRED CLEARANCE : LEVEL 4";
+
+    document.getElementById("fileModal").style.display =
+        "flex";
+
+}
+
+
+function closeFileModal() {
+
+    document.getElementById("fileModal").style.display =
+        "none";
+
+}
+
+</script>
+
+</body>
+
+</html>
