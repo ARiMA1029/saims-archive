@@ -1842,3 +1842,397 @@ body:not(.archive-page):not(.login-page)::-webkit-scrollbar-thumb:hover {
     }
 
 }
+/* ==========================================
+   全国監視マップ
+   ========================================== */
+
+.national-map-panel {
+    margin-top: 20px;
+    background: #07121b;
+    border: 1px solid #17384b;
+}
+
+.map-area {
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    min-height: 440px;
+}
+
+.japan-map {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 440px;
+
+    background:
+        linear-gradient(
+            rgba(63, 126, 160, 0.06) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(63, 126, 160, 0.06) 1px,
+            transparent 1px
+        ),
+        radial-gradient(
+            circle at 60% 45%,
+            rgba(26, 95, 130, 0.15),
+            transparent 45%
+        ),
+        #050d14;
+
+    background-size:
+        40px 40px,
+        40px 40px,
+        auto,
+        auto;
+}
+
+
+/* 日本列島っぽいライン */
+
+.japan-map::before {
+    content: "";
+
+    position: absolute;
+
+    width: 430px;
+    height: 150px;
+
+    left: 21%;
+    top: 44%;
+
+    border-bottom: 2px solid rgba(67, 150, 190, 0.18);
+
+    transform: rotate(-27deg);
+
+    border-radius: 50%;
+}
+
+
+/* 監視地点 */
+
+.map-point {
+    position: absolute;
+
+    border: 0;
+    background: transparent;
+
+    color: #7591a1;
+
+    font-family: monospace;
+    font-size: 9px;
+
+    cursor: pointer;
+
+    z-index: 5;
+}
+
+.map-point span {
+    display: block;
+
+    width: 11px;
+    height: 11px;
+
+    margin: auto;
+
+    border-radius: 50%;
+}
+
+.map-point label {
+    display: block;
+
+    margin-top: 7px;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+}
+
+
+/* NORMAL */
+
+.map-point.normal span {
+    background: #55d493;
+
+    box-shadow:
+        0 0 8px rgba(85, 212, 147, 0.7);
+}
+
+
+/* OBSERVING */
+
+.map-point.observe span {
+    background: #d5b454;
+
+    box-shadow:
+        0 0 10px rgba(213, 180, 84, 0.7);
+}
+
+
+/* ACTIVE */
+
+.map-point.active span {
+    background: #ef5e69;
+
+    box-shadow:
+        0 0 12px rgba(239, 94, 105, 0.9);
+
+    animation: anomalyPulse 1.5s infinite;
+}
+
+
+/* RESTRICTED */
+
+.map-point.restricted span {
+    background: #9670b7;
+
+    box-shadow:
+        0 0 10px rgba(150, 112, 183, 0.8);
+}
+
+
+@keyframes anomalyPulse {
+
+    0% {
+        box-shadow:
+            0 0 0 0 rgba(239, 94, 105, 0.65);
+    }
+
+    70% {
+        box-shadow:
+            0 0 0 14px rgba(239, 94, 105, 0);
+    }
+
+    100% {
+        box-shadow:
+            0 0 0 0 rgba(239, 94, 105, 0);
+    }
+
+}
+
+
+/* 各地点 */
+
+.p-hokkaido {
+    left: 72%;
+    top: 11%;
+}
+
+.p-tohoku {
+    left: 66%;
+    top: 30%;
+}
+
+.p-kanto {
+    left: 63%;
+    top: 51%;
+}
+
+.p-chubu {
+    left: 52%;
+    top: 55%;
+}
+
+.p-kinki {
+    left: 42%;
+    top: 61%;
+}
+
+.p-chugoku {
+    left: 30%;
+    top: 65%;
+}
+
+.p-shikoku {
+    left: 35%;
+    top: 76%;
+}
+
+.p-kyushu {
+    left: 18%;
+    top: 73%;
+}
+
+
+/* 緯度っぽい表示 */
+
+.map-decoration {
+    position: absolute;
+
+    top: 20px;
+    left: 15px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 115px;
+
+    color: #233f50;
+
+    font-family: monospace;
+    font-size: 8px;
+}
+
+
+/* 右側 */
+
+.map-side {
+    border-left: 1px solid #17384b;
+
+    background: #071018;
+
+    padding: 20px;
+}
+
+
+.map-legend {
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #173243;
+}
+
+.map-legend p {
+    color: #527184;
+
+    font-family: monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+}
+
+.map-legend span {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-top: 12px;
+
+    color: #718996;
+
+    font-family: monospace;
+
+    font-size: 9px;
+}
+
+.map-legend i {
+    display: inline-block;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+}
+
+.legend-normal {
+    background: #55d493;
+}
+
+.legend-observe {
+    background: #d5b454;
+}
+
+.legend-active {
+    background: #ef5e69;
+}
+
+.legend-restricted {
+    background: #9670b7;
+}
+
+
+/* ノード情報 */
+
+.map-info {
+    margin-top: 30px;
+}
+
+.map-info-label {
+    color: #496b7e;
+
+    font-family: monospace;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+}
+
+.map-info h3 {
+    margin-top: 12px;
+
+    color: #b8dbe9;
+
+    font-family: monospace;
+
+    font-weight: normal;
+
+    letter-spacing: 1px;
+}
+
+.map-info p {
+    color: #526b79;
+
+    font-size: 11px;
+
+    line-height: 1.8;
+}
+
+.map-info-row {
+    padding: 10px 0;
+
+    border-bottom: 1px solid #132c3a;
+}
+
+.map-info-row span {
+    display: block;
+
+    color: #456273;
+
+    font-family: monospace;
+
+    font-size: 8px;
+}
+
+.map-info-row strong {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #9cb8c6;
+
+    font-family: monospace;
+
+    font-size: 10px;
+}
+
+.map-info-row .info-normal {
+    color: #55d493;
+}
+
+.map-info-row .info-observe {
+    color: #d5b454;
+}
+
+.map-info-row .info-active {
+    color: #ef5e69;
+}
+
+.map-info-row .info-restricted {
+    color: #9670b7;
+}
+
+
+@media (max-width: 800px) {
+
+    .map-area {
+        grid-template-columns: 1fr;
+    }
+
+    .map-side {
+        border-left: 0;
+        border-top: 1px solid #17384b;
+    }
+
+}
