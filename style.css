@@ -91,3 +91,193 @@ footer {
     color: #666;
     padding: 25px;
 }
+.case-list {
+    margin-top: 40px;
+}
+
+.case-record {
+    display: block;
+    margin-bottom: 12px;
+    padding: 20px;
+    background-color: #f1f3f4;
+    border: 1px solid #c5c9cc;
+    border-left: 5px solid #263c50;
+    text-decoration: none;
+    color: #222;
+}
+
+.case-record:hover {
+    background-color: #e1e6e9;
+}
+
+.case-number {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 16px;
+    color: #18364d;
+}
+
+.case-title {
+    margin-top: 8px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.case-info {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #666;
+}
+
+.restricted-record {
+    border-left-color: #777;
+    opacity: 0.7;
+}
+.report {
+    margin-top: 30px;
+    padding: 55px 65px;
+    background-color: #ffffff;
+    border: 1px solid #999;
+    color: #111;
+    font-family: "Yu Mincho", "MS Mincho", serif;
+}
+
+.report-security {
+    text-align: right;
+    color: #8b0000;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+
+.report-agency {
+    text-align: right;
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.report-title {
+    text-align: center;
+    font-size: 28px;
+    letter-spacing: 8px;
+    margin: 50px 0 15px 0;
+}
+
+.report-number {
+    text-align: center;
+    font-family: monospace;
+    margin-bottom: 50px;
+}
+
+.report-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 45px;
+}
+
+.report-table th,
+.report-table td {
+    border: 1px solid #555;
+    padding: 10px 14px;
+}
+
+.report-table th {
+    width: 25%;
+    background-color: #eeeeee;
+    text-align: left;
+}
+
+.report-section {
+    margin-top: 40px;
+}
+
+.report-section h2 {
+    font-size: 18px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 6px;
+}
+
+.report-section p {
+    line-height: 2;
+    text-indent: 1em;
+}
+
+.report-end {
+    margin-top: 60px;
+    text-align: center;
+}
+/* =========================
+   流出アーカイブ入口
+   ========================= */
+
+.leak-page {
+    background-color: #090b0c;
+    color: #b8c0c2;
+    font-family: "Courier New", "Yu Gothic", monospace;
+    margin: 0;
+}
+
+.leak-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 40px;
+}
+
+.leak-header {
+    color: #e5e5e5;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-bottom: 30px;
+}
+
+.leak-code {
+    color: #687477;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.leak-container hr {
+    border: 0;
+    border-top: 1px solid #333;
+    margin: 30px 0;
+}
+
+.leak-container p {
+    line-height: 2;
+}
+
+.leak-warning {
+    border: 1px solid #762929;
+    color: #bb6262;
+    padding: 20px;
+    margin: 40px 0;
+}
+
+.archive-info {
+    font-size: 13px;
+    color: #657174;
+}
+
+.enter-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 25px;
+    border: 1px solid #777;
+    color: #ddd;
+    text-decoration: none;
+}
+
+.enter-button:hover {
+    background-color: #ddd;
+    color: #111;
+}
+
+.fiction-note {
+    margin-top: 80px;
+    padding-top: 20px;
+    border-top: 1px solid #292929;
+    color: #555;
+    font-size: 11px;
+}
