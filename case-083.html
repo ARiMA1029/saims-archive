@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SA-01-2024-083 - SAIMS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="saims-header">
+
+    <div>
+        <div class="system-name">
+            CABINET SECRETARIAT / INTERNAL NETWORK
+        </div>
+
+        <h1>SAIMS</h1>
+        <p>特別事象情報管理システム</p>
+    </div>
+
+    <div class="system-status">
+        <span>AUTHORIZED</span>
+        <span>CS-INTERNAL</span>
+    </div>
+
+</header>
+
+
+<div class="user-bar">
+
+    <span>利用者：████ ████</span>
+    <span>職員識別番号：SAI-██████</span>
+    <span>権限：LEVEL 3</span>
+    <span>SESSION：ACTIVE</span>
+
+</div>
+
+
+<main class="dashboard case-detail-page">
+
+    <div class="case-breadcrumb">
+
+        <a href="system.html">
+            SYSTEM HOME
+        </a>
+
+        <span>/</span>
+
+        <a href="cases.html">
+            INCIDENT DATABASE
+        </a>
+
+        <span>/</span>
+
+        <strong>
+            SA-01-2024-083
+        </strong>
+
+    </div>
+
+
+    <section class="case-detail-header">
+
+        <div>
+
+            <span class="case-detail-label">
+                INCIDENT RECORD
+            </span>
+
+            <h2>
+                SA-01-2024-083
+            </h2>
+
+            <h1>
+                石狩湾反復信号事案
+            </h1>
+
+        </div>
+
+
+        <div class="case-threat">
+
+            <span>
+                THREAT CLASS
+            </span>
+
+            <strong>
+                I
+            </strong>
+
+        </div>
+
+    </section>
+
+
+    <section class="case-metadata">
+
+        <div>
+            <span>管理区分</span>
+            <strong>継続監視</strong>
+        </div>
+
+        <div>
+            <span>発生地域</span>
+            <strong>北海道石狩湾</strong>
+        </div>
+
+        <div>
+            <span>初回確認</span>
+            <strong>2024/11/03</strong>
+        </div>
+
+        <div>
+            <span>担当</span>
+            <strong>北海道管区観測班</strong>
+        </div>
+
+        <div>
+            <span>現況</span>
+            <strong class="case-active-text">
+                MONITORING
+            </strong>
+        </div>
+
+        <div>
+            <span>最終更新</span>
+            <strong>2026/08/09</strong>
+        </div>
+
+    </section>
+
+
+    <section class="case-document">
+
+
+        <h3>
+            01 / 事案概要
+        </h3>
+
+        <p>
+            2024年11月3日、北海道石狩湾沖において、
+            発信源を特定できない周期的な無線信号が確認された。
+        </p>
+
+        <p>
+            当該信号は海上保安庁所属巡視船が通常任務中に受信したもので、
+            当初は海上無線設備、漂流物又は違法無線局による発信である可能性を考慮し、
+            関係機関による発信源調査が実施された。
+        </p>
+
+        <p>
+            しかし、信号が観測される座標には船舶、ブイ、
+            海底設備その他の人工構造物が存在せず、
+            当該海域を中心とした複数方向からの測位結果についても
+            相互に矛盾する結果が得られた。
+        </p>
+
+        <p>
+            その後の継続観測により通常の電波伝搬では説明困難な特徴が確認されたため、
+            2024年11月12日付で本件を特別事象として認定した。
+        </p>
+
+
+        <h3>
+            02 / 初回受信
+        </h3>
+
+        <p>
+            11月3日午前2時14分、石狩湾を航行していた巡視船
+            「████」が、海上通信周波数帯域内において短時間の信号を受信した。
+        </p>
+
+        <p>
+            当該信号は約17秒間継続した後消失。
+        </p>
+
+        <p>
+            6分12秒後、ほぼ同一の波形を持つ信号が再度受信された。
+        </p>
+
+        <div class="case-log">
+
+            <span>02:14:08</span>
+            <p>第一信号受信。</p>
+
+            <span>02:20:20</span>
+            <p>第二信号受信。</p>
+
+            <span>02:26:32</span>
+            <p>第三信号受信。</p>
+
+            <span>02:32:44</span>
+            <p>第四信号受信。</p>
+
+            <span>02:38:56</span>
+            <p>第五信号受信。</p>
+
+        </div>
+
+        <p>
+            以降、信号は正確に
+            <strong>6分12秒</strong>
+            の周期で発生した。
+        </p>
+
+        <p>
+            午前4時03分、信号は予告なく停止した。
+        </p>
+
+
+        <h3>
+            03 / 発信源調査
+        </h3>
+
+        <p>
+            海上保安庁及び総務省関係機関による方向探知を実施した結果、
+            発信源は石狩湾中央部、
+            北緯██度██分、東経███度██分付近と推定された。
+        </p>
+
+        <p>
+            当該地点の水深は約██m。
+        </p>
+
+        <p>
+            海底地形資料上、通信設備、海底ケーブル接続施設、
+            沈没船その他の発信源となり得る構造物は確認されていない。
+        </p>
+
+        <p>
+            11月6日、海上保安庁航空機による上空観測を実施したが、
+            海面上に異常は確認されなかった。
+        </p>
+
+        <p>
+            同日午後11時48分から信号が再出現。
+            約2時間にわたり同一周期で観測された。
+        </p>
+
+
+        <h3>
+            04 / 信号解析
+        </h3>
+
+        <p>
+            本室技術分析部門による解析の結果、
+            受信信号は単純なパルス信号ではなく、
+            複数の変調パターンを含むことが判明した。
+        </p>
+
+        <p>
+            その一部について音声信号への変換を試みたところ、
+            人間の発話に類似した音響パターンが確認された。
+        </p>
+
+        <p>
+            音声鑑定の結果、日本語、ロシア語、英語その他
+            既知の言語との一致は確認されていない。
+        </p>
+
+        <blockquote>
+            「一定間隔で同じ音が繰り返されているように聞こえるが、
+            個々の信号を比較すると完全に同一ではない。」
+        </blockquote>
+
+        <p>
+            現在、本室では信号を
+            <strong>ISB-SIGNAL</strong>
+            と仮称している。
+        </p>
+
+
+        <h3>
+            05 / 第一次海洋調査
+        </h3>
+
+        <p>
+            2024年12月8日、発信推定地点周辺において
+            本室及び関係機関合同による海洋調査を実施した。
+        </p>
+
+        <p>
+            遠隔操作無人潜水機を投入し、
+            推定地点周辺約500mの海底を調査したが、
+            発信装置と推定される物体は発見されなかった。
+        </p>
+
+        <p>
+            午後9時31分、調査中にISB-SIGNALが発生。
+        </p>
+
+        <p>
+            船上設備及び沿岸観測設備では通常通り信号を受信したが、
+            発信地点直上に存在した無人潜水機では
+            <strong>信号を一切検知しなかった。</strong>
+        </p>
+
+        <p>
+            一方、無人潜水機から送信された遠隔映像には、
+            信号発生時刻と一致して海底付近に一時的な光源が記録された。
+        </p>
+
+        <p>
+            光源は約4秒間出現した後消失。
+            原因は確認されていない。
+        </p>
+
+
+        <h3>
+            06 / 観測上の異常
+        </h3>
+
+        <p>
+            2025年2月以降、ISB-SIGNALの発生頻度が増加。
+        </p>
+
+        <p>
+            当初は月2〜3回程度であったが、
+            2026年現在では平均して週4回程度確認されている。
+        </p>
+
+        <p>
+            また、2025年9月14日の観測時、
+            北海道内に設置された複数の受信局が
+            同一信号を受信したにもかかわらず、
+            各局が算出した発信位置が一致しない事象が発生した。
+        </p>
+
+        <div class="case-comparison">
+
+            <div>
+
+                <span>
+                    石狩観測局
+                </span>
+
+                <p>
+                    石狩湾中央部から発信。
+                </p>
+
+            </div>
+
+            <div>
+
+                <span>
+                    小樽観測局
+                </span>
+
+                <p>
+                    観測局直下約██mから発信。
+                </p>
+
+            </div>
+
+        </div>
+
+        <p>
+            同時刻、札幌観測局は発信源について
+            <strong>「距離算出不能」</strong>
+            と記録している。
+        </p>
+
+
+        <h3 class="important-section">
+            07 / 重要記録
+        </h3>
+
+        <div class="case-important">
+
+            <p>
+                2026年6月18日午前2時14分、
+                通常のISB-SIGNALとは異なる信号が約31秒間受信された。
+            </p>
+
+            <p>
+                信号には従来観測されていなかった明確な周期構造が確認された。
+            </p>
+
+            <p>
+                数値列への変換を試みた結果、以下の値が得られた。
+            </p>
+
+            <div class="recognition-result">
+                43.2148<br>
+                141.XXXX<br>
+                2026.██.██<br>
+                02:14
+            </div>
+
+            <p>
+                第1及び第2系列は北海道内の座標を示している可能性がある。
+            </p>
+
+            <p>
+                当該座標については
+                <strong>██████████████████</strong>
+                に該当するため、
+                LEVEL 4指定情報として別記録に移管した。
+            </p>
+
+        </div>
+
+
+        <h3>
+            08 / 対外措置
+        </h3>
+
+        <p>
+            当該海域における観測活動については、
+            海洋環境調査及び海上通信環境調査として処理している。
+        </p>
+
+        <p>
+            一般船舶から同様の無線信号に関する問い合わせがあった場合、
+            混信、外国船舶通信又は電離層反射によるものとして案内する。
+        </p>
+
+        <p>
+            これまで民間船舶から寄せられた関連情報は27件。
+            インターネット上で当該信号に言及した投稿等は██件確認されている。
+        </p>
+
+        <p>
+            現時点において、特別事象との関連を示す情報が一般社会へ広範に流出した事実は確認されていない。
+        </p>
+
+
+        <h3>
+            09 / 現在の措置
+        </h3>
+
+        <p>
+            石狩湾沿岸に自動受信設備6基を設置し、
+            24時間体制による信号観測を継続している。
+        </p>
+
+        <p>
+            信号発生時には周辺海域の船舶位置情報、
+            気象情報、電磁環境及び海底観測データを同時記録する。
+        </p>
+
+        <p>
+            現在までにISB-SIGNALによる直接的な人的被害は確認されていない。
+        </p>
+
+        <p>
+            このため脅威等級は
+            <strong>I</strong>
+            を維持する。
+        </p>
+
+
+        <h3>
+            10 / 最新観測
+        </h3>
+
+        <div class="case-update">
+
+            <span>
+                UPDATE / 2026-08-09
+            </span>
+
+            <p>
+                午前3時07分、ISB-SIGNALを観測。
+            </p>
+
+            <p>
+                通常の発信周期は6分12秒であるが、
+                今回の観測において初めて
+                <strong>次回信号が発生しなかった。</strong>
+            </p>
+
+            <p>
+                その後約46分間信号は確認されず、
+                午前3時59分に単発信号を受信。
+            </p>
+
+            <p>
+                当該信号を解析した結果、
+                過去に記録された全ISB-SIGNALとの一致率は
+                <strong>0.0％</strong>
+                であった。
+            </p>
+
+            <p>
+                分析継続中。
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="case-attachments">
+
+        <h3>
+            RELATED OBJECTS
+        </h3>
+
+
+        <div class="attachment-row">
+
+            <span>
+                FILE-083-A
+            </span>
+
+            <strong>
+                初回受信音声データ
+            </strong>
+
+            <span>
+                AUDIO
+            </span>
+
+        </div>
+
+
+        <div class="attachment-row">
+
+            <span>
+                FILE-083-B
+            </span>
+
+            <strong>
+                第一次海洋調査映像
+            </strong>
+
+            <span>
+                VIDEO
+            </span>
+
+        </div>
+
+
+        <div class="attachment-row">
+
+            <span>
+                FILE-083-C
+            </span>
+
+            <strong>
+                ISB-SIGNAL周波数解析
+            </strong>
+
+            <span>
+                DATA
+            </span>
+
+        </div>
+
+
+        <div class="attachment-row restricted-attachment">
+
+            <span>
+                FILE-083-D
+            </span>
+
+            <strong>
+                2026年6月18日受信データ解析
+            </strong>
+
+            <span>
+                LEVEL 4
+            </span>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        Cabinet Secretariat Special Affairs Investigation Office
+    </p>
+
+    <p>
+        SAIMS / Incident Record SA-01-2024-083
+    </p>
+
+</footer>
+
+</body>
+
+</html>
