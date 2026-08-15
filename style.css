@@ -636,3 +636,374 @@ footer {
     }
 
 }
+/* =========================
+   事案検索
+   ========================= */
+
+.search-panel {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #edf0f2;
+    border: 1px solid #b7bdc1;
+}
+
+.search-panel label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.search-field input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #999;
+    background-color: white;
+    font-size: 15px;
+}
+
+.filter-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.filter-grid select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #999;
+    background-color: white;
+}
+
+.result-bar {
+    margin-top: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #263b4c;
+    font-family: monospace;
+    font-size: 13px;
+}
+
+.no-results {
+    display: none;
+    margin-top: 30px;
+    padding: 30px;
+    text-align: center;
+    background-color: #eee;
+    color: #777;
+    font-size: 13px;
+}
+
+@media (max-width: 750px) {
+
+    .filter-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* =========================
+   内部通達データベース
+   ========================= */
+
+.notice-warning {
+    margin-top: 30px;
+    padding: 18px 20px;
+    background-color: #fff8e8;
+    border-left: 5px solid #9b7925;
+    font-size: 13px;
+}
+
+.notice-warning p {
+    margin-bottom: 0;
+}
+
+.document-count {
+    margin-top: 35px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #263b4c;
+    font-family: monospace;
+    font-size: 11px;
+    color: #666;
+}
+
+.document-list {
+    border-left: 1px solid #bbb;
+    border-right: 1px solid #bbb;
+}
+
+.document-row {
+    display: grid;
+    grid-template-columns: 130px 120px 1fr 90px;
+    align-items: center;
+
+    min-height: 55px;
+    padding: 8px 15px;
+
+    border-bottom: 1px solid #ccc;
+
+    color: #222;
+    text-decoration: none;
+    font-size: 13px;
+
+    box-sizing: border-box;
+}
+
+.document-row:hover {
+    background-color: #e9edef;
+}
+
+.document-id {
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.document-date {
+    font-family: monospace;
+    color: #666;
+}
+
+.document-title {
+    padding: 0 15px;
+}
+
+.document-level {
+    font-family: monospace;
+    font-size: 10px;
+    text-align: center;
+
+    border: 1px solid #777;
+    padding: 4px;
+}
+
+.classified {
+    background-color: #eeeeee;
+    cursor: pointer;
+    color: #777;
+}
+
+.level4 {
+    color: #8b1e1e;
+    border-color: #8b1e1e;
+}
+
+
+/* スマホ */
+
+@media (max-width: 750px) {
+
+    .document-row {
+        grid-template-columns: 1fr;
+        gap: 5px;
+        padding: 15px;
+    }
+
+    .document-title {
+        padding: 5px 0;
+    }
+
+    .document-level {
+        width: 70px;
+    }
+
+}
+/* ==========================================
+   ARCHIVE MIRROR // NODE-04
+   ========================================== */
+
+.archive-page {
+    margin: 0;
+    min-height: 100vh;
+    background: #070909;
+    color: #9ca5a5;
+    font-family: "Courier New", "Yu Gothic", monospace;
+}
+
+.archive-terminal {
+    width: 90%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 70px 20px 40px 20px;
+    box-sizing: border-box;
+}
+
+.archive-top {
+    display: flex;
+    justify-content: space-between;
+
+    color: #d7dddd;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.archive-status {
+    margin-top: 12px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #596262;
+}
+
+.archive-status .online {
+    color: #779b82;
+}
+
+.archive-divider {
+    height: 1px;
+    background: #262b2b;
+    margin: 25px 0;
+}
+
+.archive-metadata {
+    margin: 0;
+    color: #707979;
+    font-family: "Courier New", monospace;
+    font-size: 12px;
+    line-height: 1.9;
+    white-space: pre-wrap;
+}
+
+.recovery-title {
+    color: #687272;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.recovery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: #252a2a;
+    border: 1px solid #252a2a;
+}
+
+.recovery-grid > div {
+    background: #0c0f0f;
+    padding: 20px;
+}
+
+.recovery-number {
+    display: block;
+    color: #c0c7c7;
+    font-size: 25px;
+}
+
+.recovery-label {
+    display: block;
+    margin-top: 7px;
+    color: #525c5c;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.archive-warning {
+    margin-top: 40px;
+    padding: 18px 20px;
+
+    border-left: 2px solid #703737;
+    background: #0c0d0d;
+
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.archive-warning > div {
+    color: #965050;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.archive-warning p {
+    margin: 7px 0;
+}
+
+.session-detected {
+    margin-top: 45px;
+    padding: 13px 0;
+
+    border-top: 1px solid #222828;
+    border-bottom: 1px solid #222828;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 10px;
+    color: #6d7878;
+}
+
+.session-code {
+    color: #85774e;
+}
+
+.archive-enter {
+    display: inline-block;
+
+    margin-top: 30px;
+    padding: 13px 18px;
+
+    border: 1px solid #626b6b;
+
+    color: #b9c0c0;
+    text-decoration: none;
+
+    font-size: 12px;
+    letter-spacing: 1px;
+
+    transition: 0.15s;
+}
+
+.archive-enter:hover {
+    background: #b9c0c0;
+    color: #070909;
+}
+
+.archive-bottom {
+    margin-top: 100px;
+    padding-top: 15px;
+
+    border-top: 1px solid #1d2222;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: #3d4545;
+    font-size: 9px;
+}
+
+.fiction-disclaimer {
+    margin-top: 35px;
+    color: #333b3b;
+    font-size: 8px;
+    line-height: 1.7;
+}
+
+
+/* スマホ */
+
+@media (max-width: 600px) {
+
+    .archive-terminal {
+        width: 92%;
+        padding-top: 40px;
+    }
+
+    .archive-top {
+        font-size: 16px;
+    }
+
+    .recovery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .session-detected {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .archive-bottom {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+}
