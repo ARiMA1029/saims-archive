@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SAIMS ERROR 404</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="error-page">
+
+<div class="error-terminal">
+
+    <div class="error-system">
+        SAIMS / SYSTEM ERROR
+    </div>
+
+    <div class="error-code">
+        404
+    </div>
+
+    <h1>
+        REQUESTED OBJECT NOT FOUND
+    </h1>
+
+    <div class="error-line"></div>
+
+    <div class="error-details">
+
+        <div>
+            <span>RESOURCE</span>
+            <strong id="requestedPath">
+                UNKNOWN
+            </strong>
+        </div>
+
+        <div>
+            <span>STATUS</span>
+            <strong class="error-status">
+                OBJECT INDEX MISSING
+            </strong>
+        </div>
+
+        <div>
+            <span>SESSION</span>
+            <strong>
+                SESSION_04A7F2
+            </strong>
+        </div>
+
+        <div>
+            <span>CLEARANCE</span>
+            <strong>
+                LEVEL 3
+            </strong>
+        </div>
+
+    </div>
+
+    <div class="error-message">
+
+        <p>
+            指定されたオブジェクトはSAIMS索引内に存在しません。
+        </p>
+
+        <p>
+            以下のいずれかの状態が発生している可能性があります。
+        </p>
+
+        <ul>
+            <li>対象データが削除されている</li>
+            <li>アーカイブ復元時に索引情報が失われている</li>
+            <li>現在のセッションに閲覧権限がない</li>
+            <li>指定されたオブジェクトが破損している</li>
+        </ul>
+
+    </div>
+
+    <div class="error-warning">
+
+        <span>NOTICE</span>
+
+        <p>
+            繰り返し発生する索引エラーはシステム管理担当へ報告してください。
+        </p>
+
+        <p class="error-ref">
+            ERROR REF : IDX-404-04A7
+        </p>
+
+    </div>
+
+    <div class="error-actions">
+
+        <a href="system.html">
+            [ RETURN TO SAIMS ]
+        </a>
+
+        <a href="index.html">
+            [ RETURN TO ARCHIVE ]
+        </a>
+
+    </div>
+
+</div>
+
+
+<script>
+
+document.getElementById("requestedPath").innerText =
+    window.location.pathname;
+
+</script>
+
+</body>
+
+</html>
