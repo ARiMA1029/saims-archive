@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    background-color: #dfe3e6;
+    color: #20252a;
+    font-family: "Yu Gothic", "Meiryo", sans-serif;
+}
+
+header {
+    background-color: #152331;
+    color: white;
+    padding: 30px 8%;
+    border-bottom: 5px solid #7c1c1c;
+}
+
+header h1 {
+    margin: 8px 0 3px 0;
+    font-size: 28px;
+}
+
+header p {
+    margin: 0;
+    color: #cbd3da;
+}
+
+.system-name {
+    font-family: monospace;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #98a8b5;
+}
+
+main {
+    max-width: 950px;
+    margin: 35px auto;
+    background-color: white;
+    padding: 40px;
+    border: 1px solid #b8bec3;
+}
+
+.status {
+    font-family: monospace;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 20px;
+}
+
+.status h2 {
+    font-size: 30px;
+    margin-top: 0;
+}
+
+.warning {
+    margin-top: 30px;
+    padding: 20px;
+    border: 2px solid #8b1a1a;
+    background-color: #fff7f7;
+}
+
+.warning h2 {
+    margin-top: 0;
+    color: #8b1a1a;
+}
+
+.menu {
+    margin-top: 40px;
+}
+
+.menu-button {
+    display: block;
+    padding: 18px 20px;
+    margin-bottom: 10px;
+    background-color: #edf0f2;
+    border-left: 5px solid #263c50;
+    text-decoration: none;
+    color: #172d40;
+    font-weight: bold;
+}
+
+.menu-button:hover {
+    background-color: #dce2e6;
+}
+
+.locked {
+    color: #777;
+    border-left-color: #999;
+}
+
+footer {
+    text-align: center;
+    font-family: monospace;
+    font-size: 11px;
+    color: #666;
+    padding: 25px;
+}
