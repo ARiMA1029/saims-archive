@@ -2236,3 +2236,1064 @@ body:not(.archive-page):not(.login-page)::-webkit-scrollbar-thumb:hover {
     }
 
 }
+/* ==========================================
+   SAIMS ERROR 404
+   ========================================== */
+
+.error-page {
+    margin: 0;
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(120, 24, 34, 0.10),
+            transparent 35%
+        ),
+        #05080d;
+
+    color: #a9b7c0;
+
+    font-family: "Courier New", "Yu Gothic", monospace;
+}
+
+.error-terminal {
+    width: 90%;
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    padding: 90px 20px;
+
+    box-sizing: border-box;
+}
+
+.error-system {
+    color: #526875;
+
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.error-code {
+    margin-top: 30px;
+
+    color: #e65f69;
+
+    font-size: 110px;
+    font-weight: bold;
+
+    line-height: 1;
+
+    letter-spacing: -8px;
+
+    text-shadow:
+        0 0 30px rgba(230, 95, 105, 0.15);
+}
+
+.error-terminal h1 {
+    margin-top: 10px;
+
+    color: #d6e0e6;
+
+    font-size: 19px;
+    font-weight: normal;
+
+    letter-spacing: 3px;
+}
+
+.error-line {
+    height: 1px;
+
+    margin: 35px 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #80353b,
+            #263a46,
+            transparent
+        );
+}
+
+.error-details {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 1px;
+
+    background: #16252e;
+
+    border: 1px solid #16252e;
+}
+
+.error-details > div {
+    padding: 17px;
+
+    background: #081119;
+}
+
+.error-details span {
+    display: block;
+
+    color: #4b6574;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+}
+
+.error-details strong {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #9eb4c0;
+
+    font-size: 11px;
+
+    font-weight: normal;
+
+    word-break: break-all;
+}
+
+.error-details .error-status {
+    color: #e35d67;
+}
+
+.error-message {
+    margin-top: 35px;
+
+    color: #738995;
+
+    font-size: 11px;
+
+    line-height: 1.9;
+}
+
+.error-message ul {
+    padding-left: 20px;
+
+    color: #607582;
+}
+
+.error-warning {
+    margin-top: 35px;
+
+    padding: 18px 20px;
+
+    background: #100b0d;
+
+    border-left: 2px solid #873940;
+}
+
+.error-warning > span {
+    color: #c4565e;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+.error-warning p {
+    color: #80666a;
+
+    font-size: 10px;
+
+    line-height: 1.8;
+}
+
+.error-ref {
+    margin-bottom: 0;
+
+    color: #513b3e !important;
+
+    font-size: 8px !important;
+}
+
+.error-actions {
+    margin-top: 40px;
+
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.error-actions a {
+    padding: 12px 17px;
+
+    border: 1px solid #365264;
+
+    color: #83b9d0;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    transition: 0.15s;
+}
+
+.error-actions a:hover {
+    background: #102331;
+
+    border-color: #4c91ae;
+
+    color: #bcecff;
+}
+
+@media (max-width: 600px) {
+
+    .error-code {
+        font-size: 80px;
+    }
+
+    .error-details {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* ==========================================
+   SAIMS 事案詳細
+   ========================================== */
+
+.case-detail-page {
+    max-width: 1100px;
+}
+
+.case-breadcrumb {
+    margin-bottom: 30px;
+    font-family: monospace;
+    font-size: 9px;
+    color: #526b79;
+}
+
+.case-breadcrumb span {
+    margin: 0 8px;
+}
+
+.case-detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #1d4257;
+}
+
+.case-detail-label {
+    font-family: monospace;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #4d7185;
+}
+
+.case-detail-header h2 {
+    margin: 10px 0 5px;
+
+    font-family: monospace;
+    font-size: 15px;
+    font-weight: normal;
+
+    color: #67d7fb;
+}
+
+.case-detail-header h1 {
+    margin: 0;
+
+    font-size: 28px;
+    font-weight: 500;
+
+    color: #e1f1f8;
+}
+
+.case-threat {
+    min-width: 100px;
+
+    padding: 12px;
+
+    text-align: center;
+
+    border: 1px solid #84525a;
+    border-top: 3px solid #ef6974;
+
+    background: #110c10;
+}
+
+.case-threat span {
+    display: block;
+
+    font-family: monospace;
+    font-size: 8px;
+
+    color: #885b61;
+}
+
+.case-threat strong {
+    display: block;
+
+    margin-top: 5px;
+
+    font-family: monospace;
+    font-size: 25px;
+
+    color: #ef6974;
+}
+
+
+.case-metadata {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    margin-top: 20px;
+
+    border: 1px solid #17384b;
+}
+
+.case-metadata > div {
+    padding: 15px;
+
+    border-right: 1px solid #17384b;
+    border-bottom: 1px solid #17384b;
+
+    background: #07121a;
+}
+
+.case-metadata span {
+    display: block;
+
+    font-size: 9px;
+
+    color: #4d6c7e;
+}
+
+.case-metadata strong {
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 11px;
+    font-weight: normal;
+
+    color: #a8bec9;
+}
+
+.case-active-text {
+    color: #ed6872 !important;
+}
+
+
+.case-document {
+    margin-top: 45px;
+
+    max-width: 850px;
+}
+
+.case-document h3 {
+    margin-top: 55px;
+    margin-bottom: 20px;
+
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid #193c50;
+
+    font-family: monospace;
+
+    font-size: 12px;
+    font-weight: normal;
+
+    letter-spacing: 1px;
+
+    color: #74cce9;
+}
+
+.case-document p {
+    color: #9aabb4;
+
+    font-size: 13px;
+
+    line-height: 2.05;
+}
+
+.case-document strong {
+    color: #d5e8f1;
+}
+
+
+.case-document blockquote {
+    margin: 30px 0;
+
+    padding: 20px 25px;
+
+    background: #071018;
+
+    border-left: 2px solid #527b91;
+
+    color: #b5c4cb;
+
+    font-size: 13px;
+
+    line-height: 2;
+}
+
+
+.case-log {
+    margin: 25px 0;
+
+    border-top: 1px solid #17384b;
+}
+
+.case-log > span,
+.case-log > p {
+    display: inline-block;
+}
+
+.case-log span {
+    width: 90px;
+
+    padding: 10px;
+
+    box-sizing: border-box;
+
+    font-family: monospace;
+    font-size: 10px;
+
+    color: #5c8499;
+}
+
+.case-log p {
+    width: calc(100% - 100px);
+
+    margin: 0;
+
+    padding: 10px;
+
+    box-sizing: border-box;
+
+    border-bottom: 1px solid #122d3d;
+
+    font-family: monospace;
+    font-size: 10px;
+
+    color: #8199a6;
+}
+
+
+.case-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    margin: 25px 0;
+}
+
+.case-comparison > div {
+    padding: 18px;
+
+    border: 1px solid #17384b;
+
+    background: #07121a;
+}
+
+.case-comparison span {
+    font-family: monospace;
+    font-size: 9px;
+
+    color: #64c7e7;
+}
+
+.case-comparison p {
+    margin-bottom: 0;
+}
+
+
+.important-section {
+    color: #ef6974 !important;
+
+    border-bottom-color: #73373d !important;
+}
+
+.case-important {
+    padding: 25px;
+
+    background: #100b0e;
+
+    border: 1px solid #4f292e;
+    border-left: 3px solid #d45560;
+}
+
+.recognition-result {
+    margin: 25px 0;
+
+    padding: 15px;
+
+    background: #070708;
+
+    border: 1px solid #67343a;
+
+    font-family: monospace;
+
+    font-size: 13px;
+    line-height: 1.8;
+
+    color: #ef6974;
+}
+
+
+.case-update {
+    padding: 20px;
+
+    background: #10120b;
+
+    border-left: 2px solid #b18a3f;
+}
+
+.case-update > span {
+    font-family: monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+    color: #b7944e;
+}
+
+
+.case-attachments {
+    margin-top: 70px;
+
+    border: 1px solid #17384b;
+}
+
+.case-attachments h3 {
+    margin: 0;
+
+    padding: 14px;
+
+    background: #0a1b27;
+
+    border-bottom: 1px solid #17384b;
+
+    font-family: monospace;
+
+    font-size: 10px;
+
+    color: #66bad8;
+}
+
+.attachment-row {
+    display: grid;
+
+    grid-template-columns:
+        120px
+        1fr
+        140px;
+
+    padding: 14px;
+
+    border-bottom: 1px solid #112c3b;
+
+    font-family: monospace;
+
+    font-size: 10px;
+
+    color: #708c9b;
+}
+
+.attachment-row strong {
+    color: #a8c0cb;
+
+    font-weight: normal;
+}
+
+.restricted-attachment {
+    opacity: 0.5;
+}
+
+.restricted-attachment span:last-child {
+    color: #ef6974;
+}
+
+
+@media (max-width: 700px) {
+
+    .case-detail-header {
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .case-detail-header h1 {
+        font-size: 21px;
+    }
+
+    .case-metadata {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .case-comparison {
+        grid-template-columns: 1fr;
+    }
+
+    .attachment-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+
+}
+/* ==========================================
+   MOBILE FIX / 共通スマホ対応
+   ========================================== */
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    /* ヘッダー */
+
+    .saims-header {
+        padding: 20px 18px;
+        display: block;
+    }
+
+    .saims-header h1 {
+        font-size: 30px;
+        letter-spacing: 4px;
+    }
+
+    .saims-header p {
+        font-size: 11px;
+    }
+
+    .system-status {
+        margin-top: 15px;
+        text-align: left;
+    }
+
+    /* ユーザー情報 */
+
+    .user-bar {
+        padding: 10px 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        font-size: 9px;
+    }
+
+    /* メイン */
+
+    main,
+    .dashboard {
+        width: auto;
+        max-width: none;
+
+        margin: 12px;
+        padding: 20px;
+
+        box-sizing: border-box;
+    }
+
+    .dashboard-title h2 {
+        font-size: 21px;
+    }
+
+    /* カード */
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-card {
+        width: 100%;
+        min-height: auto;
+        padding: 18px;
+    }
+
+    /* 通知 */
+
+    .notice-date {
+        display: block;
+        width: auto;
+        margin-bottom: 5px;
+    }
+
+    /* 検索 */
+
+    .filter-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-panel {
+        padding: 18px;
+    }
+
+    /* 事案一覧 */
+
+    .case-record {
+        padding: 16px;
+    }
+
+    .case-number {
+        font-size: 13px;
+    }
+
+    .case-title {
+        font-size: 16px;
+    }
+
+    .case-info {
+        line-height: 1.7;
+    }
+
+    /* 事案詳細 */
+
+    .case-detail-header {
+        display: block;
+    }
+
+    .case-detail-header h1 {
+        font-size: 22px;
+        line-height: 1.5;
+    }
+
+    .case-threat {
+        margin-top: 20px;
+        width: 85px;
+    }
+
+    .case-metadata {
+        grid-template-columns: 1fr;
+    }
+
+    .case-document {
+        width: 100%;
+        max-width: none;
+    }
+
+    .case-document p {
+        font-size: 13px;
+        line-height: 1.9;
+    }
+
+    .case-comparison {
+        grid-template-columns: 1fr;
+    }
+
+    .attachment-row {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    /* 調査資料 */
+
+    .file-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .file-toolbar {
+        grid-template-columns: 1fr;
+    }
+
+    .investigation-file {
+        grid-template-columns: 45px 1fr;
+    }
+
+    .file-type,
+    .file-status {
+        grid-column: 2;
+        width: max-content;
+    }
+
+    /* 内部通達 */
+
+    .document-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+        padding: 15px;
+    }
+
+    .document-title {
+        padding: 0;
+    }
+
+    /* 統合監視 */
+
+    .monitor-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .monitor-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .region-row {
+        grid-template-columns: 1fr 80px;
+        gap: 5px;
+        padding: 12px;
+    }
+
+    .feed-row {
+        grid-template-columns: 65px 1fr;
+        gap: 5px;
+        padding: 12px;
+    }
+
+    .feed-row span:last-child {
+        grid-column: 2;
+    }
+
+    /* モーダル */
+
+    .modal-box {
+        width: calc(100% - 30px);
+        padding: 25px;
+    }
+
+    /* フッター */
+
+    footer {
+        padding: 20px 15px;
+        font-size: 9px;
+    }
+
+}
+/* ==========================================
+   SAIMS INTERNAL MAIL
+   ========================================== */
+
+.mail-page {
+    max-width: 1100px;
+}
+
+.mail-warning {
+    margin-top: 25px;
+    padding: 17px 20px;
+
+    background: #0d1114;
+
+    border-left: 2px solid #8e703d;
+}
+
+.mail-warning strong {
+    font-family: monospace;
+    font-size: 9px;
+    letter-spacing: 1px;
+
+    color: #b59455;
+}
+
+.mail-warning p {
+    margin-bottom: 0;
+
+    font-size: 11px;
+    line-height: 1.8;
+
+    color: #716e65;
+}
+
+
+.mail-toolbar {
+    margin-top: 30px;
+
+    display: grid;
+    grid-template-columns: 1fr 150px;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.mail-toolbar input {
+    width: 100%;
+
+    padding: 12px;
+
+    background: #061019;
+
+    border: 1px solid #1b4055;
+
+    color: #b7ccd7;
+
+    box-sizing: border-box;
+}
+
+.mail-toolbar span {
+    text-align: right;
+
+    font-family: monospace;
+    font-size: 9px;
+
+    color: #4d6b7b;
+}
+
+
+.mail-list {
+    margin-top: 15px;
+
+    border: 1px solid #17384b;
+}
+
+
+.mail-row {
+    display: grid;
+
+    grid-template-columns:
+        35px
+        120px
+        1fr
+        100px;
+
+    align-items: center;
+
+    min-height: 70px;
+
+    padding: 10px 15px;
+
+    box-sizing: border-box;
+
+    border-bottom: 1px solid #112d3c;
+
+    background: #07121a;
+
+    color: inherit;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: 0.15s;
+}
+
+.mail-row:hover {
+    background: #0b1d28;
+}
+
+
+.mail-status {
+    font-family: monospace;
+    font-size: 10px;
+
+    color: #557889;
+}
+
+
+.mail-sender {
+    font-family: monospace;
+    font-size: 10px;
+
+    color: #6d9db3;
+}
+
+
+.mail-content strong {
+    display: block;
+
+    font-size: 12px;
+    font-weight: normal;
+
+    color: #b9ccd5;
+}
+
+.mail-content span {
+    display: block;
+
+    margin-top: 6px;
+
+    font-size: 10px;
+
+    color: #607985;
+}
+
+
+.mail-date {
+    text-align: right;
+
+    font-family: monospace;
+    font-size: 9px;
+
+    color: #536d7a;
+}
+
+.mail-date span {
+    display: block;
+
+    margin-top: 5px;
+}
+
+
+.unread-mail {
+    border-left: 2px solid #58b9d9;
+}
+
+.unread-mail .mail-status {
+    color: #60c9ec;
+}
+
+
+.locked-mail {
+    opacity: 0.6;
+}
+
+.locked-mail .mail-status,
+.locked-mail .mail-date span {
+    color: #d1626b;
+}
+
+
+.damaged-mail {
+    opacity: 0.55;
+}
+
+.damaged-mail .mail-status,
+.damaged-mail .mail-date span {
+    color: #c49855;
+}
+
+
+@media (max-width: 700px) {
+
+    .mail-toolbar {
+        grid-template-columns: 1fr;
+    }
+
+    .mail-toolbar span {
+        text-align: left;
+    }
+
+    .mail-row {
+        grid-template-columns: 25px 1fr;
+        gap: 5px 10px;
+
+        padding: 14px;
+    }
+
+    .mail-sender {
+        grid-column: 2;
+    }
+
+    .mail-content {
+        grid-column: 2;
+    }
+
+    .mail-date {
+        grid-column: 2;
+
+        text-align: left;
+
+        margin-top: 5px;
+    }
+
+}

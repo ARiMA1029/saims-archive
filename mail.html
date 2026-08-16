@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+
+    <title>SAIMS - Internal Messaging</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="saims-header">
+
+    <div>
+        <div class="system-name">
+            CABINET SECRETARIAT / INTERNAL NETWORK
+        </div>
+
+        <h1>SAIMS</h1>
+        <p>特別事象情報管理システム</p>
+    </div>
+
+    <div class="system-status">
+        <span>AUTHORIZED</span>
+        <span>CS-INTERNAL</span>
+    </div>
+
+</header>
+
+
+<div class="user-bar">
+    <span>利用者：████ ████</span>
+    <span>職員識別番号：SAI-██████</span>
+    <span>権限：LEVEL 3</span>
+    <span>SESSION：ACTIVE</span>
+</div>
+
+
+<main class="dashboard mail-page">
+
+    <div class="case-breadcrumb">
+
+        <a href="system.html">SYSTEM HOME</a>
+
+        <span>/</span>
+
+        <strong>INTERNAL MESSAGING</strong>
+
+    </div>
+
+
+    <section class="dashboard-title">
+
+        <h2>内部通信記録</h2>
+
+        <p>
+            INTERNAL MESSAGE ARCHIVE
+        </p>
+
+    </section>
+
+
+    <div class="mail-warning">
+
+        <strong>
+            RECOVERED MESSAGE DATABASE
+        </strong>
+
+        <p>
+            以下の通信記録は復元アーカイブから再構成されたものです。
+            一部の送信者情報、添付データ及び時刻情報が欠損しています。
+        </p>
+
+    </div>
+
+
+    <section class="mail-toolbar">
+
+        <input
+            type="text"
+            id="mailSearch"
+            placeholder="送信者・件名・事案番号を検索"
+        >
+
+        <span>
+            RECOVERED : 47
+        </span>
+
+    </section>
+
+
+    <section id="mailList" class="mail-list">
+
+
+        <!-- MAIL 01 -->
+
+        <a href="mail-001.html"
+           class="mail-row unread-mail">
+
+            <div class="mail-status">
+                ●
+            </div>
+
+            <div class="mail-sender">
+                SAI-021847
+            </div>
+
+            <div class="mail-content">
+
+                <strong>
+                    石狩湾観測データについて
+                </strong>
+
+                <span>
+                    03:59受信分について確認事項あり
+                </span>
+
+            </div>
+
+            <div class="mail-date">
+                2026/08/09
+                <span>04:17</span>
+            </div>
+
+        </a>
+
+
+        <!-- MAIL 02 -->
+
+        <div class="mail-row locked-mail"
+             onclick="showMailRestricted()">
+
+            <div class="mail-status">
+                ■
+            </div>
+
+            <div class="mail-sender">
+                SAI-██████
+            </div>
+
+            <div class="mail-content">
+
+                <strong>
+                    RE: 6月18日受信データ
+                </strong>
+
+                <span>
+                    ████████████████████
+                </span>
+
+            </div>
+
+            <div class="mail-date">
+                2026/06/19
+                <span>LEVEL 4</span>
+            </div>
+
+        </div>
+
+
+        <!-- MAIL 03 -->
+
+        <div class="mail-row damaged-mail"
+             onclick="showMailDamaged()">
+
+            <div class="mail-status">
+                ×
+            </div>
+
+            <div class="mail-sender">
+                UNKNOWN
+            </div>
+
+            <div class="mail-content">
+
+                <strong>
+                    [SUBJECT DATA LOST]
+                </strong>
+
+                <span>
+                    メッセージ本文を復元できません
+                </span>
+
+            </div>
+
+            <div class="mail-date">
+                2026/05/██
+                <span>DAMAGED</span>
+            </div>
+
+        </div>
+
+
+        <!-- MAIL 04 -->
+
+        <div class="mail-row">
+
+            <div class="mail-status">
+                ○
+            </div>
+
+            <div class="mail-sender">
+                SAI-014903
+            </div>
+
+            <div class="mail-content">
+
+                <strong>
+                    定期観測報告提出について
+                </strong>
+
+                <span>
+                    北海道管区・第31週観測報告
+                </span>
+
+            </div>
+
+            <div class="mail-date">
+                2026/08/07
+                <span>09:32</span>
+            </div>
+
+        </div>
+
+
+        <!-- MAIL 05 -->
+
+        <div class="mail-row">
+
+            <div class="mail-status">
+                ○
+            </div>
+
+            <div class="mail-sender">
+                SYSTEM
+            </div>
+
+            <div class="mail-content">
+
+                <strong>
+                    SAIMS定期保守実施通知
+                </strong>
+
+                <span>
+                    中央サーバー保守作業に伴うサービス停止
+                </span>
+
+            </div>
+
+            <div class="mail-date">
+                2026/08/05
+                <span>18:00</span>
+            </div>
+
+        </div>
+
+
+    </section>
+
+</main>
+
+
+<div id="mailModal" class="modal-background">
+
+    <div class="modal-box">
+
+        <div class="modal-title">
+            SAIMS MESSAGE CONTROL
+        </div>
+
+        <h2 id="mailModalTitle">
+            ACCESS DENIED
+        </h2>
+
+        <p id="mailModalText"></p>
+
+        <button onclick="closeMailModal()">
+            閉じる
+        </button>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    <p>
+        Cabinet Secretariat Special Affairs Investigation Office
+    </p>
+
+    <p>
+        SAIMS / Internal Message Archive
+    </p>
+
+</footer>
+
+
+<script>
+
+const search =
+    document.getElementById("mailSearch");
+
+const mails =
+    document.querySelectorAll(".mail-row");
+
+
+search.addEventListener("input", function () {
+
+    const value =
+        search.value.toLowerCase();
+
+    mails.forEach(function (mail) {
+
+        const text =
+            mail.innerText.toLowerCase();
+
+        if (text.includes(value)) {
+
+            mail.style.display = "grid";
+
+        } else {
+
+            mail.style.display = "none";
+
+        }
+
+    });
+
+});
+
+
+function showMailRestricted() {
+
+    document.getElementById("mailModalTitle").innerText =
+        "ACCESS DENIED";
+
+    document.getElementById("mailModalText").innerHTML =
+        "指定された通信記録を閲覧する権限がありません。" +
+        "<br><br>" +
+        "REQUIRED CLEARANCE : LEVEL 4";
+
+    document.getElementById("mailModal").style.display =
+        "flex";
+
+}
+
+
+function showMailDamaged() {
+
+    document.getElementById("mailModalTitle").innerText =
+        "MESSAGE DAMAGED";
+
+    document.getElementById("mailModalText").innerHTML =
+        "通信記録の復元に失敗しました。" +
+        "<br><br>" +
+        "RECOVERY STATUS : INCOMPLETE";
+
+    document.getElementById("mailModal").style.display =
+        "flex";
+
+}
+
+
+function closeMailModal() {
+
+    document.getElementById("mailModal").style.display =
+        "none";
+
+}
+
+</script>
+
+</body>
+</html>
